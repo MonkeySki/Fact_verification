@@ -1,11 +1,10 @@
-import pandas as pd
 import keras
+import numpy as np
+import pandas as pd
+import tensorflow as tf
 from keras import layers
 from sklearn.model_selection import train_test_split
-import tensorflow as tf
 from transformers import BertTokenizer, TFBertModel
-import numpy as np
-
 
 # Load the pre-trained BERT model and tokenizer
 model_name = 'bert-base-uncased'
@@ -13,7 +12,7 @@ tokenizer = BertTokenizer.from_pretrained(model_name)
 model = TFBertModel.from_pretrained(model_name)
 
 # File reading
-fact_ver_dataframe = pd.read_excel('C:/Users/breco/Documents/Code/Fact_verification/Claims.xlsx')
+fact_ver_dataframe = pd.read_excel('Claims.xlsx')
 
 # Set up BERT tokenizer and model
 model_name = 'bert-base-uncased'
